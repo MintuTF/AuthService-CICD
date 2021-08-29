@@ -9,4 +9,4 @@ script:
 services: -docker
 script:
   - docker-compose build -t 127109/first .
-  - docker-compose images 127109/first
+
