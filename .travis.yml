@@ -2,5 +2,5 @@ language: java
 sudo: required
 services: -docker
 script:
-  - docker build -t 127109/first .
-  - docker images 127109/first
+  - docker-compose build -t 127109/first .
+  - docker-compose images 127109/first
