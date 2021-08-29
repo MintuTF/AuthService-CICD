@@ -1,0 +1,18 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    volumes:
+      - "dbvolumescreated:/hello"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=useraccess
+      - MYSQL_PASSWORD=root
+  authservice:
+    build: .
+    ports:
+      - 8040:8040
+    depends_on:
+      - db
+volumes:
+  dbvolumescreated:
