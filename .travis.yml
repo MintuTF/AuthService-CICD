@@ -7,3 +7,5 @@ install:
 services: -docker
 script:
   - docker-compose build
+before_deploy:
+  - docker login -u 127109 -p Mam/Dad/09

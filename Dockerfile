@@ -1,6 +1,6 @@
 FROM openjdk:11
 
-RUN MKDIR /app/authservice
+# RUN MKDIR /app/authservice
 WORKDIR /app/authservice
 
 COPY /target/*.jar /app/authservice/app.jar
