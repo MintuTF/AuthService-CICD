@@ -4,9 +4,6 @@ jdk:
 sudo: required
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-script:
-  - mvn test
 services: -docker
 script:
-  - docker-compose build -t 127109/first .
-
+  - docker-compose build
