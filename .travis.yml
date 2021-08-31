@@ -9,3 +9,8 @@ script:
   - docker-compose build
 before_deploy:
   - docker login -u 127109 -p Mam/Dad/09
+deploy:
+  provider: script
+  script: docker push services
+  on:
+    branch: master
